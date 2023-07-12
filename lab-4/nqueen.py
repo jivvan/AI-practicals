@@ -35,7 +35,7 @@ def solveNQ(board, col, N):
 
 def main():
     N = int(input("Enter size of chessboard:"))
-    board = [[0] * N for i in range(N)]
+    board = [[0]*N for i in range(N)]
 
     if solveNQ(board, 0, N) == False:
         print("Solution does not exist")

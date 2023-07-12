@@ -30,9 +30,6 @@ graph = {
     'j':[]
 }
 
-visited:list[Node] = []
-queue:list[Node] = []
-
 def print_path(visited:list[Node]):
     states = []
     cost = 0
@@ -48,8 +45,9 @@ def print_path(visited:list[Node]):
     print(f'Total cost = {cost}')
 
 def dfs(start_state, goal_state):
+    queue:list[Node] = [Node(start_state, None)]
+    visited:list[Node] = []
     found = False
-    queue.append(Node(start_state, None))
 
     while len(queue) != 0:
         node = queue.pop()
